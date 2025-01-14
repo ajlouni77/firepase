@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firestore & Authentication Example</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="authForm">
+      <h1>Sign Up or Sign In</h1>
+      <input type="email" placeholder="Email" id="userEmail" />
+      <input type="password" placeholder="Password" id="userPassword" />
+      <button id="signUpButton">Sign Up</button>
+      <button id="signInButton">Sign In</button>
+    </div>
+
+    <div id="secretContent">
+      <h3>This is top-secret information that you can only see if</h3>
+      <h1>AUTHENTICATED</h1>
+      <button id="signOutButton">Sign Out</button>
+      <button id="homeButton">Home Page</button>
+
+      <div id="productForm">
+        <h1>Add Product</h1>
+        <form id="addProductForm">
+          <input
+            type="text"
+            id="productName"
+            placeholder="Product Name"
+            required
+          />
+          <input type="number" id="productPrice" placeholder="Price" required />
+          <input
+            type="text"
+            id="productCategory"
+            placeholder="Category"
+            required
+          />
+          <button type="submit">Add Product</button>
+        </form>
+      </div>
+
+      <h2>Product List</h2>
+      <div id="productsContainer"></div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
